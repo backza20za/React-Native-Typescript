@@ -2,26 +2,27 @@ import {View, Text, SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
 import {Button, NativeBaseProvider,Icon as NBIcon,} from 'native-base';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import SafeAreaProvider from './src/context/SafeAreaProvider';
 
 const App = () => {
   return (
-    <NativeBaseProvider theme={undefined}>
-      <SafeAreaView>
+
+      <SafeAreaProvider>
         <ScrollView>
           <View>
             <Text>App</Text>
           </View>
-          <Button
+          {/* <Button
           leftIcon={<NBIcon as={Icon} name="home" size="lg" />}
           size="sm"
           width="40"
           colorScheme="success"
           >
           About Page
-        </Button>
+        </Button> */}
         </ScrollView>
-      </SafeAreaView>
-    </NativeBaseProvider>
+      </SafeAreaProvider>
+
   );
 };
 
