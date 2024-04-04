@@ -5,6 +5,7 @@ import LoginScreen from '../../screens/AuthScreen/LoginScreen';
 const LoginStack = () => {
   const LoginStack = createNativeStackNavigator();
   return (
+    <>
     <LoginStack.Navigator>
       <LoginStack.Screen
         name="Login"
@@ -12,6 +13,7 @@ const LoginStack = () => {
         options={{title: 'เข้าระบบ', headerShown: false}}
       />
     </LoginStack.Navigator>
+    </>
   );
 };
 

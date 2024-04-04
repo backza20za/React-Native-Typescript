@@ -12,8 +12,10 @@ import {
   VStack,
 } from 'native-base';
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
+  const navigation = useNavigation<any>()
   return (
     <Center w="100%" style={styles.contentCenter}>
       <Box safeArea p="2" py="8" w="90%" maxW="290">
@@ -60,7 +62,7 @@ const LoginScreen = () => {
             mt="2"
             colorScheme="indigo"
             onPress={() => {
-              console.log('login');
+              navigation.navigate('Home')
             }}>
             Log In
           </Button>
