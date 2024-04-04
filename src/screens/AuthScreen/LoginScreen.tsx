@@ -11,10 +11,11 @@ import {
   Text,
   VStack,
 } from 'native-base';
+import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
 
 const LoginScreen = () => {
   return (
-    <Center w="100%">
+    <Center w="100%" style={styles.contentCenter}>
       <Box safeArea p="2" py="8" w="90%" maxW="290">
         <Heading
           size="lg"
@@ -87,5 +88,14 @@ const LoginScreen = () => {
     </Center>
   );
 };
+
+const styles = StyleSheet.create({
+  contentCenter: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default LoginScreen;
